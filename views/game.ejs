@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trivia Game</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="/game.js"></script>
+    <link href= "/style/game.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">Trivia Game</a>
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/scores">Scores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/category">start!</a>
+              </li>
+            </ul>
+          </nav>
+    </header>
+
+<main>
+  <div class="jumbotron">
+  <div class="container">
+		<div class="row">
+			<div class="col-xs-12 quizForm">
+				<form method="post" action="/game/next">
+					<label id = 'question'><%= question %> </label>
+					<div class="radio">
+							<% answers.forEach(function(option,index){ %>
+							<label class="radio">
+							 <input required  type="radio" name="optradio" value=<%= index %>><%= option %></label>
+               <br>
+							<% })%>
+            <div class = "next-question">
+					  	<input type="submit" class="btn btn-success" value="Next">
+            </div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</main>
+    <footer>
+        <p class="text-center text-muted">© Copyright 2021 Amit Margalit</p>
+    </footer>
+
+
+
+</body>
+</html>
+

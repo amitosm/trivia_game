@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trivia Game</title>
+    <script type="text/javascript" src="/categories.js"></script>
+    <link href= "/style/categories.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">Trivia Game</a>
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/scores">Scores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/questions/sdk">start!</a>
+              </li>
+            </ul>
+          </nav>
+    </header>
+
+<main>
+  <div class="jumbotron">
+  <h3 class ="category_header">Choose a category-</h3>  
+        <ul style="padding-left: 0px">
+            <% for (let i =0; i < categories.length;  i++ ) { %>
+                <li id ="category">
+                  <button type="button" class="btn btn-info" onclick='redirect_to_game(this)'>
+                    <%= categories[i].name %>
+                  </button>
+                </li>
+            <% }; %>
+
+        </ul>
+</div>
+</main>
+    <footer>
+        <p class="text-center text-muted">© Copyright 2021 Amit Margalit</p>
+    </footer>
+
+
+
+</body>
+</html>
+

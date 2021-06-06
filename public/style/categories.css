@@ -1,0 +1,17 @@
+button {
+    color: red;
+}
+
+
+li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+
+}
+
+.category_header{
+    padding: .5rem 1rem;
+    color: #17a2b8;
+    size: 10px;
+}
