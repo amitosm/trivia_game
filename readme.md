@@ -10,8 +10,6 @@ in this project, ive experencied for the first time in:
 
 In additon, i've used free trivia questions DB API.
 
-<br>
-<br>
 
 # In order to play:
 - clone/download the repository.
